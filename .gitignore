@@ -1,0 +1,19 @@
+# ---------------------------
+# Python cache
+# ---------------------------
+
+# Ignorer tous les dossiers __pycache__ et leur contenu
+__pycache__/
+**/__pycache__/
+
+# Ignorer tous les fichiers .pyc et .pyo générés par Python
+*.py[cod]
+*$py.class
+
+# ---------------------------
+# macOS
+# ---------------------------
+
+# Ignorer les fichiers systèmes de macOS
+.DS_Store
+**/.DS_Store
