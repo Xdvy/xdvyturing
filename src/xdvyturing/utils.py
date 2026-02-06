@@ -3,6 +3,7 @@
 
 import sys
 import argparse
+import math
 
 def largest_prime_divisor(n, collect=False):
     """
@@ -41,3 +42,23 @@ def largest_prime_divisor(n, collect=False):
             factors.append(current)
 
     return factors, last
+
+def is_prime(n: int) -> bool:
+    '''
+    Check if n is a prime number
+    
+    :param n: number to test
+    :return : True or False
+    '''
+    if n < 2 :
+        return False
+    for j in range(3,int(math.sqrt(n))+1,2) :
+        if n%j == 0 :
+            return False
+    return True
+
+def positive_int(value: str) -> int:
+    ivalue = int(value)
+    if ivalue < 1:
+        raise argparse.ArgumentTypeError("n must be a positive integer")
+    return ivalue
